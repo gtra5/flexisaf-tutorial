@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Refresher Deliverable - Tailwind Edition</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-[#A0C6FF] text-slate-900 min-h-screen antialiased">
+    <!-- HEADER -->
+    <header
+      class="bg-white/30 backdrop-blur border-b border-white/40 sticky top-0 z-50"
+    >
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 h-14 sm:h-16 flex items-center justify-between"
+      >
+        <span
+          class="font-display text-lg sm:text-xl font-extrabold tracking-tight"
+        >
+          Axiom<span class="text-blue-700">.</span>
+        </span>
+        <nav
+          class="hidden sm:flex items-center gap-6 text-sm font-medium text-slate-700"
+        >
+          <a href="#" class="hover:text-slate-900 transition-colors">Shop</a>
+          <a href="#" class="hover:text-slate-900 transition-colors"
+            >Collections</a
+          >
+          <a href="#" class="hover:text-slate-900 transition-colors">About</a>
+        </nav>
+        <button
+          class="text-slate-700 hover:text-slate-900 transition-colors"
+          aria-label="Cart"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-shopping-cart-icon lucide-shopping-cart"
+          >
+            <circle cx="8" cy="21" r="1" />
+            <circle cx="19" cy="21" r="1" />
+            <path
+              d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"
+            />
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- MAIN -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 py-6 sm:py-10">
+      <!-- STATS -->
+      <div
+        id="stats-panel"
+        class="bg-white/30 border-l-4 border-emerald-500 rounded-r-lg p-4 mb-8"
+      >
+        <p class="text-slate-600 animate-pulse">Running computations...</p>
+      </div>
+
+      <!-- SECTION HEADER + FILTERS -->
+      <div
+        class="section-header flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between mb-6 sm:mb-8"
+      >
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-slate-900">
+          All products
+        </h2>
+
+        <div class="flex gap-2 overflow-x-auto pb-1 sm:pb-0 sm:flex-wrap">
+          <button
+            id="btn-all"
+            class="filter-btn ripple-btn flex-shrink-0 px-4 py-2 bg-slate-900 text-white text-xs sm:text-sm font-semibold rounded-full whitespace-nowrap"
+          >
+            All items
+          </button>
+          <button
+            id="btn-high"
+            class="filter-btn ripple-btn flex-shrink-0 px-4 py-2 bg-white border border-slate-200 text-slate-600 text-xs sm:text-sm font-semibold rounded-full whitespace-nowrap"
+          >
+            Over $500
+          </button>
+          <button
+            id="btn-electronics"
+            class="filter-btn ripple-btn flex-shrink-0 px-4 py-2 bg-white border border-slate-200 text-slate-600 text-xs sm:text-sm font-semibold rounded-full whitespace-nowrap"
+          >
+            Tech
+          </button>
+          <button
+            id="btn-beauty"
+            class="filter-btn ripple-btn flex-shrink-0 px-4 py-2 bg-white border border-slate-200 text-slate-600 text-xs sm:text-sm font-semibold rounded-full whitespace-nowrap"
+          >
+            Beauty
+          </button>
+        </div>
+      </div>
+
+      <!-- PRODUCT GRID -->
+      <div
+        id="display-container"
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5"
+      ></div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="mt-16 border-t border-white/40 bg-white/20">
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-slate-700"
+      >
+        <span class="font-display font-bold"
+          >Axiom<span class="text-blue-700">.</span></span
+        >
+        <p>© 2026 Axiom Store. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
